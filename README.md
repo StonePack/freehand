@@ -9,7 +9,7 @@ There's a lot of examples online but felt that this could still be useful for an
 ### Abstract
 Using the `Path` class I found to be the easiest method for drawing the user generated brush strokes. It's fairly easy to update a path within the gesture detector `onUpdate` methods by tracking the `Offset` positions and requires minimal code to draw in a custom painter.
 
-Additionally, creating a custom class that stores a `List<Offset>` and `Paint` instance makes it simple to store user selected brush options and the path offsets generated using the selected options.
+Additionally, creating a custom class that stores a `List<Offset>` and `Paint` instance makes it simple to store user selected brush options and the path offsets generated using the gestures.
 
 ### Implementation
 First, start by creating a class that has a `List<Offset>` which will be used to generate the path in the `CustomPainter` later and a `Paint` property:
