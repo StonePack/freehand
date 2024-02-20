@@ -73,16 +73,10 @@ class _DrawingCanvasState extends State<DrawingCanvas> {
     return Scaffold(
       backgroundColor: const Color(0xFF242423),
       body: GestureDetector(
-        onHorizontalDragStart: (DragStartDetails details) {
+        onPanStart: (DragStartDetails details) {
           _onBrushStrokeStart(details.localPosition);
         },
-        onHorizontalDragUpdate: (DragUpdateDetails details) {
-          _onBrushStrokeUpdate(details.localPosition);
-        },
-        onVerticalDragStart: (DragStartDetails details) {
-          _onBrushStrokeStart(details.localPosition);
-        },
-        onVerticalDragUpdate: (DragUpdateDetails details) {
+        onPanUpdate: (DragUpdateDetails details) {
           _onBrushStrokeUpdate(details.localPosition);
         },
         child: CustomPaint(
